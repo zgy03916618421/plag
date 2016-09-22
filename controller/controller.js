@@ -10,7 +10,7 @@ var infectservice = require('../service/infectedservice');
 exports.oauth = function *() {
     var code = this.query.code;
     console.log(code);
-    var token = yield client.getAccessToken('code');
+    var token = yield client.getAccessToken(code);
     var accessToken = token.data.access_token;
     var openid = token.data.openid;
     var userinfo = yield client.getUser(openid);
