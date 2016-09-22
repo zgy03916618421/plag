@@ -13,7 +13,7 @@ exports.oauth = function *() {
     var accessToken = token.data.access_token;
     var openid = token.data.openid;
     var userinfo = yield client.getUser(openid);
-
+    this.body = userinfo;
 }
 exports.upPic = function *() {
         console.log(this);
