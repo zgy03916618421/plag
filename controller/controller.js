@@ -14,7 +14,7 @@ exports.oauth = function *() {
     var accessToken = token.data.access_token;
     var openid = token.data.openid;
     var userinfo = yield client.getUser(openid);
-    this.response.redirect('http://www.baidu.com');
+    console.log(userinfo.openid);
 }
 exports.upPic = function *() {
         console.log(this);
